@@ -151,6 +151,8 @@ class MainActivity : AppCompatActivity() {
                 "timestamp" to System.currentTimeMillis()
             )
 
+            HistorialLocalDb(this).guardarRegistroLocal(fechaHoraActual, porcionSeleccionada, "Manual ($correoUsuario)")
+
             db.collection("historial").add(historialMap).addOnSuccessListener {
                 btnDispensar.isEnabled = true
                 btnDispensar.text = "DISPENSAR AHORA"
