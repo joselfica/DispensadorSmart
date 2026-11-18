@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "230187542482",
+    "project_id": "dispensadorsmart",
+    "storage_bucket": "dispensadorsmart.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230187542482:android:60c0de66373c8338be8a0b",
+        "android_client_info": {
+          "package_name": "com.estudio.dispensadorsmart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzD6W4ohYqbkjqBaO3uLk6uKlLGevaG8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

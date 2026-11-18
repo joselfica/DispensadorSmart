@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8FAFC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- CABECERA CON DEGRADADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header_gradiente"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="44dp">
+
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hola, usuario@test.com"
+                android:textSize="13sp"
+                android:textColor="#CCFBF1"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispensador Smart"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- TARJETA FLOTANTE DE ESTADO (Superpuesta a la cabecera) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_tarjeta"
+            android:elevation="4dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="-28dp"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ESTADO DEL EQUIPO"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:textColor="#64748B" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comedero Wi-Fi"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Badge / Píldora de estado -->
+            <TextView
+                android:id="@+id/tvEstadoDispensador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="● Cargando..."
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#059669"
+                android:background="@drawable/bg_badge_estado" />
+        </LinearLayout>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Tarjeta Protagonista: Dispensar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_tarjeta"
+                android:elevation="2dp"
+                android:padding="20dp"
+                android:layout_marginBottom="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍽️  Servir Alimento Ahora"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona la cantidad exacta para tu mascota"
+                    android:textSize="13sp"
+                    android:textColor="#64748B"
+                    android:layout_marginBottom="16dp" />
+
+                <Spinner
+                    android:id="@+id/spPorcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnDispensar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="DISPENSAR PORCIÓN"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.04"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_boton_primario"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <!-- Accesos rápidos en 2 columnas -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/btnHorariosHistorial"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_weight="1"
+                    android:text="📅 Horarios\ne Historial"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F766E"
+                    android:background="@drawable/bg_boton_outline"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnPanelAdmin"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_weight="1"
+                    android:text="⚙️ Panel\nAdmin"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F766E"
+                    android:background="@drawable/bg_boton_outline"
+                    android:visibility="gone"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar sesión"
+                android:textSize="14sp"
+                android:textColor="#94A3B8" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

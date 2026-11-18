@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8FAFC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header_gradiente"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTROL DEL SISTEMA"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:textColor="#CCFBF1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Administración"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Tarjeta de conectividad -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_tarjeta"
+                android:elevation="2dp"
+                android:padding="18dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIMULACIÓN DE CONEXIÓN"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:textColor="#64748B"
+                    android:layout_marginBottom="10dp" />
+
+                <Switch
+                    android:id="@+id/swEstadoDispensador"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Dispensador En línea"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_marginBottom="10dp" />
+
+                <Button
+                    android:id="@+id/btnAjustesWifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:text="📡 Ajustes Wi-Fi del teléfono"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F766E"
+                    android:background="@drawable/bg_boton_outline" />
+            </LinearLayout>
+
+            <!-- Tarjeta de usuarios -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_tarjeta"
+                android:elevation="2dp"
+                android:padding="18dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CUENTAS (TOCA PARA DESBLOQUEAR)"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:textColor="#64748B"
+                    android:layout_marginBottom="10dp" />
+
+                <ListView
+                    android:id="@+id/lvUsuarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="8dp" />
+            </LinearLayout>
+
+            <!-- Tarjeta de resumen -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_tarjeta"
+                android:elevation="2dp"
+                android:padding="18dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESUMEN DE ACTIVIDAD"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:textColor="#64748B"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvResumenActividad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cargando..."
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#1E293B" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnVolverAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Volver al Panel Principal"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_boton_secundario" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
